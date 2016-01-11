@@ -22,7 +22,8 @@ var ot = new opentok(config.opentok.key, config.opentok.secret);
 var app = express();
 app.set( 'views', __dirname + "/views");
 app.set( 'view engine', 'ejs' );
-app.use(bodyParser());
+app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 // ***
