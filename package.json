@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "dependencies": {
     "express": "^4.0.0",
-    "body-parser":"*",
+    "body-parser":"^1.14.2",
     "opentok": "^2.2",
     "ejs": "^1.0.0",
     "redis": ">=0.10.1",
