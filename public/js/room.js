@@ -71,9 +71,10 @@ Room.prototype = {
       setTimeout(function(){_this.initialized = true;}, 2000);
     });
     session.on("sessionDisconnected", function(event){
-      var msg = (event.reason === "forceDisconnected") ? "Someone in the room found you offensive and removed you. Please evaluate your behavior" : "You have been disconnected! Please try again";
+      var msg = (event.reason === "forceDisconnected") ? "You call has been ended by the advisee";
       alert(msg);
-      window.location = "/";
+      $('#mymodal')[0].className="modal-open";
+      //window.location = "/";
     });
     session.on("streamCreated", function(event){
       var streamConnectionId = event.stream.connection.connectionId;
