@@ -98,9 +98,9 @@ Room.prototype = {
         var streamConnection = $(this).data('streamconnection');
         if(confirm("Are you sure, you want to end this call?")){
            console.log("showing modal ratinfs");
-           console.log($('#myModal').className);
-           $('#myModal').className = "modal-open";
-            console.log($('#myModal').className);
+           console.log($('#mymodal').className);
+           $('#mymodal').className = "modal-open";
+            console.log($('#mymodal').className);
           _this.applyClassFilter("Blur", "."+streamConnection);
           _this.session.forceDisconnect( streamConnection.split("stream")[1] );
         }
@@ -313,7 +313,7 @@ var findConnectionIdFromElement = function(el) {
 };
 
 $("#modalSave").on("click",function(e){
-    $('#myModal').className = "modal fade"
+    $('#mymodal').className = "modal fade"
 });
 
 $("div.star-rating > s, div.star-rating-rtl > s").on("click", function(e) {
