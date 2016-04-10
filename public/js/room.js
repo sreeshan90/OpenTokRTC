@@ -98,7 +98,7 @@ Room.prototype = {
         var streamConnection = $(this).data('streamconnection');
         if(confirm("Are you sure, you want to end this call?")){
            console.log("showing modal ratinfs")
-           $('#myModal').modal('show');
+           $('#myModal').addClass("modal-open");
           _this.applyClassFilter("Blur", "."+streamConnection);
           _this.session.forceDisconnect( streamConnection.split("stream")[1] );
         }
@@ -310,3 +310,11 @@ var findConnectionIdFromElement = function(el) {
   return undefined;
 };
 
+$("#modalSave").on("click",function(e){
+    $('#myModal').addClass("modal fade");
+});
+
+$("div.star-rating > s, div.star-rating-rtl > s").on("click", function(e) {
+		var numStars = $(e.target).parentsUntil("div").length+1;
+		alert(numStars + (numStars == 1 ? " star" : " stars!"));
+	});
