@@ -71,7 +71,7 @@ Room.prototype = {
       setTimeout(function(){_this.initialized = true;}, 2000);
     });
     session.on("sessionDisconnected", function(event){
-      var msg = (event.reason === "forceDisconnected") ? "You call has been ended by the advisee";
+      var msg = (event.reason === "forceDisconnected") ? "Your call has ended" : "You have been disconnected! Please try again";
       alert(msg);
       $('#mymodal')[0].className="modal-open";
       //window.location = "/";
