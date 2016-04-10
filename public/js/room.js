@@ -97,8 +97,10 @@ Room.prototype = {
       divId$.find('.flagUser').click(function(){
         var streamConnection = $(this).data('streamconnection');
         if(confirm("Are you sure, you want to end this call?")){
-           console.log("showing modal ratinfs")
+           console.log("showing modal ratinfs");
+           console.log($('#myModal').className);
            $('#myModal').className = "modal-open";
+            console.log($('#myModal').className);
           _this.applyClassFilter("Blur", "."+streamConnection);
           _this.session.forceDisconnect( streamConnection.split("stream")[1] );
         }
