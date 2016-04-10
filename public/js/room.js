@@ -317,7 +317,7 @@ var findConnectionIdFromElement = function(el) {
 
 $("#modalSave").on("click",function(e){
      $('#mymodal')[0].className="modal fade";
-     windows.location.href = "http://localhost:1337/student-index.html#2"
+     window.location.href = "http://localhost:1337/student-index.html#2"
 });
 
 $("div.star-rating > s, div.star-rating-rtl > s").on("click", function(e) {
