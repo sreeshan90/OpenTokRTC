@@ -96,7 +96,8 @@ Room.prototype = {
       // mark user as offensive
       divId$.find('.flagUser').click(function(){
         var streamConnection = $(this).data('streamconnection');
-        if(confirm("Is this user being inappropriate? If so, click confirm to remove user")){
+        if(confirm("Are you sure, you want to end this call?")){
+          $("#stars").css("display","none");
           _this.applyClassFilter("Blur", "."+streamConnection);
           _this.session.forceDisconnect( streamConnection.split("stream")[1] );
         }
