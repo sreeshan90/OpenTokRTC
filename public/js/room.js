@@ -98,10 +98,10 @@ Room.prototype = {
         var streamConnection = $(this).data('streamconnection');
         if(confirm("Are you sure, you want to end this call?")){
            console.log("showing modal ratinfs");
-           console.log($('#mymodal').className);
+           console.log($('#mymodal'));
           // $('#mymodal').className = "modal-open";
-           $('#mymodal').show();
-            console.log($('#mymodal').className);
+          $('#myModal').modal('show');
+            console.log($('#mymodal'));
           _this.applyClassFilter("Blur", "."+streamConnection);
           _this.session.forceDisconnect( streamConnection.split("stream")[1] );
         }
