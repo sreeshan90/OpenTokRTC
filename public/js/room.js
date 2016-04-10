@@ -97,7 +97,7 @@ Room.prototype = {
       divId$.find('.flagUser').click(function(){
         var streamConnection = $(this).data('streamconnection');
         if(confirm("Are you sure, you want to end this call?")){
-          $("#stars").css("display","none");
+          $("#stars").css("display","block");
           _this.applyClassFilter("Blur", "."+streamConnection);
           _this.session.forceDisconnect( streamConnection.split("stream")[1] );
         }
