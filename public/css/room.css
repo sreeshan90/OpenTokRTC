@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6, p {
   #controlsContainer .controlsBody {
     padding-top: 8px;
     background-color: #282828;
-    padding-bottom: 8px;
+    padding-bottom: 48px;
     padding-left: 10px; }
     #controlsContainer .controlsBody .optionContainer #controlOptionsRight {
       display: inline-block;
